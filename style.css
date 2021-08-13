@@ -1,0 +1,190 @@
+body{
+    margin:0; /*to remove the unwanted margin given by default*/
+    overflow:hidden; /*to remove the scroll bar that came by default*/
+    font-size:14;
+}
+
+*{
+    box-sizing:border-box; /*the border and padding etc. get counted internally itself i.e within 100vh*/
+}
+.container {
+    height:100vh;
+}
+
+.title-bar {
+    height:5vh;
+    background-color:#107c41;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+.menu-bar {
+    height:5vh;
+    background-color:#107c41;
+    display:flex; /*flex-direction:row; is row by default , so no need to mention here.*/
+
+}
+
+.menu-item{
+    padding-left:10px;
+    padding-right:10px;
+    color:#fff;
+    font-size:17px;
+    display:flex;
+    align-items:center;
+}
+
+.menu-item:hover{
+    background-color:#09582d;
+    cursor:pointer;/*or else system treats it as text , so made cursor as pointer..*/
+}
+
+.menu-item.selected{ /*In case if there is more than one class, we use 'class1.class2'.*/
+    background-color:#fff;
+    color:#107c41;
+}
+
+.menu-icon-bar {
+    height:5vh;
+    display:flex;
+    align-items:center;
+    background-color:rgb(226, 222, 222);
+}
+.menu-icon{
+    padding-left:10px;
+    padding-right:10px;
+    display:flex;
+    align-items:center;
+
+}
+.menu-icon:hover{
+    background-color:lightgrey;
+    cursor:pointer;
+    height:100%;
+    display:flex;
+    align-items:center;
+}
+
+.font-family-selector{
+    height:28px;
+    font-size:16px;
+    width:150px;
+}
+.selector option{ /* for the options which are inside the selector */
+    font-size:16px; /*for font-size of options in selectors. */
+}
+
+.formula-bar {
+    height:5vh;
+}
+
+.data-container {
+    height: 75vh;
+    display:flex;
+    flex-wrap: wrap;
+    /*width:100%;*/
+    
+     /*it makes the 'select-all' and 'column-name-container' in the same line. */
+}
+
+.select-all{
+    width:30px;
+    height:30px;
+    border:1px solid lightgrey;
+}
+.column-name-container{
+    width:calc(100vw - 30px);
+    height:30px;
+    border:1px solid lightgrey;
+    display:flex;
+    /*align-items:center;*/ 
+}
+.row-name-container{
+    width:30px;
+    height:calc(75vh - 30px);
+    border:1px solid lightgrey;
+    overflow:hidden;
+}
+
+.input-cell-container{
+    width:calc(100vw - 30px);
+    height:calc(75vh - 30px);
+    border:1px solid lightgrey;
+}
+
+.sheet-bar {
+    height:4vh;
+    display:flex;
+    align-items:center;
+}
+
+.scroller{
+    width:70px;
+}
+
+.icon-left-scroll,.icon-right-scroll{
+    color:#107c41;
+    font-size:30px;
+}
+.icon-left-scroll:hover,.icon-right-scroll:hover{
+    background-color:lightgrey;
+    cursor:pointer;
+}
+.icon-add{
+    width:30px;
+    color:#107c41;
+}
+.icon-add:hover{
+    cursor:pointer;
+    transform:scale(1.2);
+}
+
+.sheet-tab-container{
+    border:1px solid lightgrey;
+    width:calc(100vw - 110px);
+}
+.sheet-tab{
+    border-bottom:4px solid #107c41;
+    padding-left:10px;
+    padding-right:10px;
+    display:flex;
+    align-items:center;
+    width:80px;
+    justify-content:center;
+    font-weight:600;
+    border-right:1px solid lightgray
+}
+.sheet-tab:hover{
+    cursor:default;
+}
+.column-name{
+    min-width:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-right:1px solid lightgray;
+    font-weight:bold;
+}
+
+.row-name{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:25px;
+    border-bottom:1px solid lightgray;
+}
+
+.cell-row{
+    display:flex;
+}
+.input-cell{
+    width:100px;
+    height:25px;
+    height:25px;
+    width:100px;
+    border-right:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+
+}
